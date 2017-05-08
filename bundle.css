@@ -1,0 +1,660 @@
+* {
+  margin-left: 0;
+  margin-right: 0; }
+
+body {
+  margin-top: 0;
+  background: url("Images/pokemon.png");
+  background-attachment: fixed; }
+
+.homeback {
+  width: 100%;
+  height: 100%;
+  background: url("Images/Home.jpeg"); }
+
+.homething {
+  width: 250px;
+  height: 100%;
+  margin: 0;
+  background: -webkit-linear-gradient(crimson, crimson, transparent);
+  background: -moz-linear-gradient(crimson, crimson, transparent);
+  background: -o-linear-gradient(crimson, crimson, transparent);
+  background: linear-gradient(crimson, crimson, transparent);
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+.pokeball {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .5s ease-in-out; }
+
+.pokeball:hover {
+  transform: rotate(2160deg); }
+
+.pokehalo {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 1001;
+  bottom: 0;
+  left: 1;
+  right: 0;
+  margin: auto;
+  background-color: transparent;
+  box-shadow: inset 0 0 9em transparent;
+  transition: background-color 1s ease-in-out, box-shadow 3s ease-in-out, transform 1.5s ease-in-out; }
+
+.pokehalo:hover {
+  box-shadow: inset 0 0 .20em hotpink, 0 0 .20em crimson;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale3d(20, 20, 20); }
+
+.menu {
+  position: absolute;
+  width: 100%;
+  font-size: 1.5;
+  visibility: hidden; }
+
+.campaign {
+  position: relative;
+  display: none;
+  top: 1;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transform: translate(-35%, 0);
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  transition: transform .2s ease-in-out; }
+
+.campaign:hover {
+  color: black;
+  text-shadow: 0px 0px 1px crimson; }
+
+.arena {
+  position: relative;
+  display: none;
+  top: 5.3;
+  bottom: 0;
+  left: -3;
+  right: 0;
+  width: 7px;
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  transition: transform .2s ease-in-out; }
+
+.arena:hover {
+  color: black;
+  text-shadow: 0px 0px 1px crimson; }
+
+.disco {
+  position: relative;
+  display: none;
+  top: 3;
+  bottom: 0;
+  left: 12.5;
+  right: 0;
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  transition: transform .2s ease-in-out; }
+
+.disco:hover {
+  color: black;
+  text-shadow: 0px 0px 1px crimson; }
+
+.credits {
+  position: relative;
+  display: none;
+  top: 8;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transform: translate(-32%, 0);
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  transition: transform .2s ease-in-out; }
+
+.credits:hover {
+  color: black;
+  text-shadow: 0px 0px 1px crimson; }
+
+.pokeback {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: inset 0 0 9em crimson;
+  transition: box-shadow .5s ease-in-out, transform .5s ease-in-out; }
+
+.pokeback:hover {
+  box-shadow: inset 0 0 9em pink, 0 0 10em crimson;
+  transform: scale3d(1.2, 1.2, 1.2); }
+
+.homeaudio {
+  cursor: pointer;
+  width: 27px;
+  position: absolute;
+  top: 2.48;
+  left: 2.48;
+  margin: auto; }
+
+.audioback {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15;
+  left: 15;
+  margin: auto;
+  box-shadow: inset 0 0 5em crimson;
+  transition: box-shadow .2s ease-in-out; }
+
+.audioback:hover {
+  box-shadow: inset 0 0 5em purple; }
+
+.pokedance {
+  width: 100px;
+  position: absolute;
+  top: 690;
+  bottom: 0;
+  left: 30;
+  right: 0;
+  transition: transform .3s ease-in-out; }
+
+.pokedance:hover {
+  transform: scale3d(1.5, 1.5, 1.5); }
+
+.pokedances {
+  width: 120px;
+  position: absolute;
+  top: 697;
+  bottom: 0;
+  left: 95;
+  right: 0; }
+
+.pokeblood {
+  width: 200px;
+  position: absolute;
+  top: 660;
+  bottom: 0;
+  left: 10;
+  right: 0; }
+
+.pokehome {
+  width: 300px;
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+.andhome {
+  font-family: 'Press Start 2P';
+  font-size: 35px;
+  color: black;
+  text-shadow: 0 0 10px crimson;
+  position: absolute;
+  top: 22.5%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.friendhome {
+  font-family: 'Press Start 2P';
+  font-size: 60px;
+  background: -webkit-linear-gradient(top, orangered, transparent);
+  text-shadow: 0 0 20px crimson;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.homefooter {
+  background: black;
+  vertical-align: middle;
+  font-family: 'Raleway';
+  color: crimson;
+  text-align: center;
+  box-shadow: 0 0 50px black;
+  width: 100%;
+  height: 20px;
+  bottom: 0px;
+  position: fixed; }
+
+.top-header {
+  background: -webkit-linear-gradient(left, orangered, orange, orangered);
+  box-shadow: 0 0 10px black;
+  width: 100%;
+  height: 35px;
+  position: fixed; }
+
+.top {
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: 'Luckiest Guy';
+  position: relative;
+  color: black;
+  font-size: 20px;
+  text-shadow: 0 0 30px orange;
+  transition: color .2s ease-in-out, text-shadow .2s ease-in-out; }
+
+.top:hover {
+  color: orange;
+  text-shadow: 0 0 10px darkred; }
+
+.right-side {
+  margin-top: 5px;
+  float: right;
+  position: relative; }
+
+.left-side {
+  margin-top: 11px;
+  float: left;
+  position: relative; }
+
+.settings {
+  position: relative;
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  transition: transform .5s ease-in-out; }
+
+.settings:hover {
+  cursor: pointer;
+  transform: rotate(540deg); }
+
+.contact {
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  transition: transform .5s ease-in-out; }
+
+.contact:hover {
+  cursor: pointer;
+  transform: rotate(540deg); }
+
+.about {
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  transition: transform .5s ease-in-out; }
+
+.about:hover {
+  cursor: pointer;
+  transform: rotate(540deg); }
+
+.fight-banner {
+  cursor: pointer;
+  font-family: 'Luckiest Guy';
+  font-size: 20px;
+  background: -webkit-linear-gradient(left, orange, orangered, orange);
+  box-shadow: 0 0 50px black;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  margin-top: 34px;
+  transition: height 1s ease-in-out; }
+
+.fight-banner:active {
+  background: url("Images/Battle-Grounds.png");
+  background-repeat: no-repeat;
+  height: 650px; }
+
+.vs-first {
+  font-family: 'Luckiest Guy';
+  font-size: 40px;
+  align-self: center;
+  color: orange;
+  text-shadow: 0 0 30px black;
+  margin-top: 20px;
+  transition: color 1s ease-in-out, text-shadow 1s ease-in-out; }
+
+.vs-second {
+  font-family: 'Luckiest Guy';
+  font-size: 40px;
+  align-self: center;
+  color: orange;
+  text-shadow: 0 0 30px black;
+  margin-top: 20px;
+  transition: color 1s ease-in-out, text-shadow 1s ease-in-out; }
+
+.dead {
+  font-family: 'Luckiest Guy';
+  font-size: 40px;
+  margin-top: 20px;
+  color: black;
+  text-shadow: 0 0 30px red;
+  align-self: center; }
+
+.blood {
+  height: 100px;
+  width: 100px; }
+
+.versus {
+  align-self: center;
+  width: 120px;
+  height: 120px; }
+
+.home-side {
+  width: 100px;
+  height: 100px;
+  opacity: .05;
+  align-self: center; }
+
+.visitor-side {
+  width: 100px;
+  height: 100px;
+  opacity: .05;
+  align-self: center; }
+
+.fight-button-lit {
+  font-family: 'Trade Winds';
+  display: flex;
+  color: black;
+  justify-content: center;
+  margin-top: 135px;
+  font-size: 80px;
+  box-shadow: inset 0 0 1em black;
+  background: -webkit-linear-gradient(left, darkred, black, black, black, darkred);
+  text-shadow: 0 0 10px red;
+  transition: box-shadow .75s ease-in-out, color 1.5s ease-in-out, text-shadow .5s ease-in-out; }
+
+.fight-button-lit:hover {
+  color: red;
+  cursor: pointer;
+  box-shadow: inset 0 0 .5em orangered, 0 0 100px red;
+  text-shadow: 0 0 20px black;
+  animation: colorchange 10s;
+  -webkit-animation: colorchange .5s; }
+
+@keyframes colorchange {
+  0% {
+    background: -webkit-linear-gradient(left, darkred, darkred, black, darkred, darkred); }
+  10% {
+    background: -webkit-linear-gradient(left, red, darkred, black, darkred, red); }
+  20% {
+    background: -webkit-linear-gradient(left, orangered, red, black, red, orangered); }
+  30% {
+    background: -webkit-linear-gradient(left, orange, orangered, black, orangered, orange); }
+  40% {
+    background: -webkit-linear-gradient(left, yellow, orange, black, orange, yellow); }
+  50% {
+    background: -webkit-linear-gradient(left, yellow, yellow, orange, yellow, yellow); }
+  60% {
+    background: -webkit-linear-gradient(left, yellow, yellow, white, yellow, yellow); }
+  70% {
+    background: -webkit-linear-gradient(left, orange, yellow, orangered, yellow, orange); }
+  80% {
+    background: -webkit-linear-gradient(left, yellow, yellow, white, yellow, yellow); }
+  90% {
+    background: -webkit-linear-gradient(left, orangered, yellow, black, yellow, orangered); }
+  100% {
+    background: -webkit-linear-gradient(left, orangered, black, black, black, orangered); } }
+
+.fight-button-lit:active {
+  text-shadow: 0 0 70px red;
+  box-shadow: inset 0 0 .10em orangered, 0 0 150px red; }
+
+.fight-button {
+  font-family: 'Trade Winds';
+  display: flex;
+  color: black;
+  justify-content: center;
+  margin-top: 135px;
+  font-size: 80px;
+  box-shadow: inset 0 0 1em black;
+  background: -webkit-linear-gradient(left, darkred, black, black, black, darkred);
+  text-shadow: 0 0 10px red;
+  transition: box-shadow .75s ease-in-out, color 1.5s ease-in-out, text-shadow .5s ease-in-out; }
+
+.winner {
+  font-family: 'Luckiest Guy';
+  font-size: 20px;
+  margin-left: 670px; }
+
+.champ {
+  font-family: 'Luckiest Guy';
+  font-size: 20px;
+  color: orangered;
+  margin-left: 10px; }
+
+.list {
+  font-family: 'Luckiest Guy';
+  font-size: 20px;
+  margin-left: 10px;
+  background: -webkit-linear-gradient(left, transparent, brown); }
+
+.home {
+  width: 30px;
+  height: 30px;
+  background: -webkit-linear-gradient(left, orange, orangered);
+  box-shadow: 0 0 10px black; }
+
+.home:hover {
+  cursor: pointer;
+  animation: pulse 10s;
+  -webkit-animation: pulse .5s; }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.4, 1.4, 1.4);
+    transform: scale3d(1.4, 1.4, 1.4); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.visitor {
+  width: 30px;
+  height: 30px;
+  background: -webkit-linear-gradient(left, brown, orangered);
+  box-shadow: 0 0 10px black; }
+
+.visitor:hover {
+  cursor: pointer;
+  animation: pulse 10s;
+  -webkit-animation: pulse .5s; }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.4, 1.4, 1.4);
+    transform: scale3d(1.4, 1.4, 1.4); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.data {
+  cursor: pointer;
+  margin-top: 15px;
+  float: right;
+  margin-right: 1000px;
+  color: brown;
+  text-shadow: 0 0 10px #fee8b8;
+  transition: color .2s ease-in-out, text-shadow .2s ease-in-out; }
+
+.data:hover {
+  color: #fee8b8;
+  text-shadow: 0 0 10px brown;
+  animation: pulse 10s;
+  -webkit-animation: pulse .5s; }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.3, 1.3, 1.3);
+    transform: scale3d(1.3, 1.3, 1.3); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+.search {
+  margin-left: 10px;
+  width: 360px; }
+
+.look {
+  font-family: 'Luckiest Guy';
+  font-size: 20px;
+  margin-left: 10px; }
+
+.info {
+  font-family: 'Luckiest Guy';
+  font-size: 17px;
+  margin-left: 10px; }
+
+.bits {
+  font-family: 'Luckiest Guy';
+  color: brown; }
+
+.clans {
+  text-align: center;
+  box-shadow: inset 0 0 1em black;
+  background: -webkit-linear-gradient(left, orangered, transparent, transparent, orangered); }
+
+.clan {
+  cursor: pointer;
+  height: 50px;
+  margin-left: 20px;
+  transition: transform .3s ease-in-out; }
+
+.clan:hover {
+  transform: scale3d(1.4, 1.4, 1.4); }
+
+.footer {
+  background: black;
+  vertical-align: middle;
+  font-family: 'Raleway';
+  color: #fee8b8;
+  text-align: center;
+  box-shadow: 0 0 50px black;
+  width: 100%;
+  height: 20px;
+  bottom: 0px;
+  position: fixed; }
+
+.disco-header {
+  background: url("Images/Disco/frontVibe.gif");
+  box-shadow: 0 0 10px black;
+  z-index: 100;
+  width: 100%;
+  height: 35px;
+  position: fixed; }
+
+.disco-top {
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: 'Luckiest Guy';
+  position: relative;
+  color: pink;
+  text-shadow: 0 0 5px darkviolet;
+  font-size: 20px;
+  transition: color .2s ease-in-out, text-shadow .2s ease-in-out; }
+
+.disco-top:hover {
+  color: white;
+  text-shadow: 0 0 20px mediumvioletred; }
+
+.disco-right-side {
+  margin-top: 5px;
+  float: right;
+  position: relative; }
+
+.disco-left-side {
+  margin-top: 11px;
+  float: left;
+  position: relative; }
+
+.anddisco {
+  font-family: 'Press Start 2P';
+  font-size: 35px;
+  color: black;
+  text-shadow: 0 0 10px mediumvioletred;
+  color: white;
+  position: absolute;
+  top: 22.5%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.frienddisco {
+  font-family: 'Press Start 2P';
+  font-size: 60px;
+  background: -webkit-linear-gradient(top, mediumvioletred, transparent);
+  text-shadow: 0 0 20px mediumvioletred;
+  color: white;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.discoback {
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background: url("Images/Disco/backVibe.gif") no-repeat center center fixed; }
+
+.discothing {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(palevioletred, palevioletred, transparent);
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+.discotitle {
+  font-family: 'Montserrat Alternates';
+  font-size: 270px;
+  color: white;
+  text-shadow: 0 0 80px white;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%); }
+
+.discofooter {
+  background: black;
+  vertical-align: middle;
+  font-family: 'Raleway';
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 50px black;
+  width: 100%;
+  height: 20px;
+  bottom: 0px;
+  position: fixed; }

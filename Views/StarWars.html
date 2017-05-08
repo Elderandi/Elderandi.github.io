@@ -1,0 +1,29 @@
+<hr>
+<span class="look">SEARCH</span><input class="search" type="text" ng-model="Search.name"></span>
+<span class='winner'>WINNER:<span class="champ">{{winner.name}}</span>
+<hr>
+
+<span class="info" ng-show="starData">
+	<span class="bits">Name:</span>&nbsp;&nbsp;{{starData.name}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">DOB:</span>&nbsp;&nbsp;{{starData.birth_year}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">Gender:</span>&nbsp;&nbsp;{{starData.gender}}&nbsp;&nbsp;&nbsp;
+	<span class="bits">Height:</span>&nbsp;&nbsp;{{starData.height}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">Mass:</span>&nbsp;&nbsp;{{starData.mass}} &nbsp;&nbsp;&nbsp;
+    <span class="bits">Skin Color:</span>&nbsp;&nbsp;{{starData.skin_color}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">Eye Color:</span>&nbsp;&nbsp;{{starData.eye_color}} &nbsp;&nbsp;&nbsp;
+    <span class="bits">Hair Color:</span>&nbsp;&nbsp;{{starData.hair_color}} &nbsp;&nbsp;&nbsp;
+</span>
+
+<hr>
+
+<div class="list" ng-repeat='star in starWars | filter: Search'>	
+
+    <img ng-src= "Images/Home.svg" class="home" type="button" ng-click='get2Pics(star.name); setPoke2(star)'>&nbsp;&nbsp;</img>
+			
+    <img ng-src= "Images/Visitor.svg" class = "visitor" type="button" ng-click='get1Pics(star.name); setPoke1(star)'></img>
+			
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{star.name}} <span class="data" type="button" ng-click='getStarData(star.url)'>INFO</span> 
+
+    <hr>
+			
+</div>

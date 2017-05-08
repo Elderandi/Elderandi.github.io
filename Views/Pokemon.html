@@ -1,0 +1,30 @@
+<hr>
+<span class="look">SEARCH</span><input class="search" type="text" ng-model="Search.name"></span>
+<span class='winner'>WINNER:<span class="champ">{{winner.name}}</span>
+<hr>	
+	
+<span class="info" ng-show="pokeData">
+	<span class="bits">ID:</span>&nbsp;&nbsp;{{pokeData.id}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">Name:</span>&nbsp;&nbsp;{{pokeData.name}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">Height:</span>&nbsp;&nbsp;{{pokeData.height}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">Weight:</span>&nbsp;&nbsp;{{pokeData.weight}} &nbsp;&nbsp;&nbsp;
+	<span class="bits">1st Type:</span>&nbsp;&nbsp;{{pokeData.types[0].type.name}}&nbsp;&nbsp;&nbsp;
+	<span class="bits">2nd Type:</span>&nbsp;&nbsp;{{pokeData.types[1].type.name}}&nbsp;&nbsp;&nbsp;
+	<span class="bits">1st Ability:</span>&nbsp;&nbsp;{{pokeData.abilities[0].ability.name}}&nbsp;&nbsp;&nbsp;
+	<span class="bits">2nd Ability:</span>&nbsp;&nbsp;{{pokeData.abilities[1].ability.name}}&nbsp;&nbsp;&nbsp;
+	<span class="bits">3rd Ability:</span>&nbsp;&nbsp;{{pokeData.abilities[2].ability.name}}
+</span>
+		
+<hr>
+		
+<div class="list" ng-repeat='pokeman in pokemon | filter: Search'>
+			
+	<img ng-src= "Images/Home.svg" class="home" type="button" ng-click='get2Pics(pokeman.name); setPoke2(pokeman)'>&nbsp;&nbsp;</img>
+			
+	<img ng-src= "Images/Visitor.svg" class = "visitor" type="button" ng-click='get1Pics(pokeman.name); setPoke1(pokeman)'></img>
+			
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pokeman.name}} <span class="data" type="button" ng-click='getData(pokeman.name)'>INFO</span> 
+
+	<hr>
+			
+</div>

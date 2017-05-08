@@ -1,0 +1,56 @@
+
+<div class= "top-header">
+		<div class = "left-side">
+		<span ui-sref="home" class="top" type="button">HOME</span>
+		<span class="top" type="button">SIGN UP</span>
+		<span class="top" type="button">LOG IN</span>
+</div>
+
+<div class = "right-side">
+		<img ng-src= "Images/Info.svg" class="about" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Contact.svg" class="contact" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Gear.svg" class="settings" type="button" ng-click='getData()'></img>
+</div>
+		</div>
+
+		<hr>
+
+		<div class="fight-banner">
+
+<!--<img ng-src= "Images/Home.svg" class="home-side"></img>-->
+
+		<img ng-hide="enabled1" ng-src='{{poke1.url}}'><img class="blood" ng-show="enabled1" ng-src= "Images/Bloods.png">
+		<span class="vs-first"ng-class="{'dead':enabled1}">&nbsp;&nbsp;{{poke2.name}}</span>
+		
+			<img ng-src= "Images/Versus.png" class="versus"></img>
+		
+		<span class="vs-second"ng-class="{'dead':enabled2}">{{poke1.name}}&nbsp;&nbsp;</span>	
+		<img ng-hide="enabled2" ng-src='{{pokePics1}}'><img class="blood" ng-show="enabled2" ng-src= "Images/Blood.png">
+		
+<!--<img ng-src= "Images/Visitor.svg" class = "visitor-side"></img>-->
+		
+		</div>
+		<br>
+		<fight-dir></fight-dir>
+
+<div class= "clans">
+        <img ng-src= "Images/Logos/PK-Logo.png" ui-sref="pokearena.pokemon" class="clan" type="button" ng-click='getPokemon()'></img>
+		<img ng-src= "Images/Logos/LP-Logo.png" ui-sref="pokearena.littlepony" class="clan" type="button" ng-click='getPonyData()'></img>
+		<img ng-src= "Images/Logos/MV-Logo.png" class="clan" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Logos/DC-Logo.png" class="clan" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Logos/MK-Logo.png" class="clan" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Logos/SF-Logo.png" class="clan" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Logos/SW-Logo.png" ui-sref="pokearena.starwars" class="clan" type="button" ng-click='getStarWars()'></img>
+		<img ng-src= "Images/Logos/JP-Logo.png" class="clan" type="button" ng-click='getData()'></img>
+		<img ng-src= "Images/Logos/DZ-Logo.png" class="clan" type="button" ng-click='getData()'></img>
+</div>		
+
+<ui-view></ui-view>
+
+<div class= "footer"> © Jnr Anderson 2017&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;
+						Pokémonsters&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;
+						Privacy&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;
+						Terms&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;
+						Donate&nbsp;&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&nbsp;
+						ID: AA19241204
+						</div>
