@@ -4,7 +4,7 @@ angular.module('pokeFightClub', ["ui.router"])
 $stateProvider
 .state("home",{
     url: "/",
-    templateUrl: "./../Home.html",
+    templateUrl: "./Views/Home.html",
     controller: "control"
 })
 .state("pokedisco",{
